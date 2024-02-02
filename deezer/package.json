@@ -8,6 +8,10 @@
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
     "@mdi/font": "7.0.96",
     "core-js": "^3.34.0",
     "roboto-fontface": "*",
@@ -31,6 +35,7 @@
     "vite": "^5.0.0",
     "vite-plugin-vue-layouts": "^0.10.0",
     "vite-plugin-vuetify": "^2.0.0",
+    "vue-cli-plugin-vuetify": "^2.5.8",
     "vue-router": "^4.2.0"
   }
 }

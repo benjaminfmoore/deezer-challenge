@@ -1,10 +1,248 @@
-/**
- * src/styles/settings.scss
- *
- * Configures SASS variables and Vuetify overwrites
- */
+.album-info-results {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
 
-// https://vuetifyjs.com/features/sass-variables/`
-// @use 'vuetify/settings' with (
-//   $color-pack: false
-// );
+.search-result {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto 16px;
+}
+
+.play-button {
+  margin-left: 20px;
+}
+
+.album-and-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.album-cover img {
+  max-width: 100%;
+  height: auto;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.song-preview-display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 12px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.results-display {
+  display: flex;
+  flex-direction: row;
+}
+
+.song-play-info {
+  display: flex;
+  justify-content: space-between;
+  border-left: black 2px solid;
+  margin-left: 4px;
+  height: 40px;
+}
+
+.search-result a {
+  margin-top: 8px;
+  color: #3498db;
+  text-decoration: none;
+  display: block;
+}
+
+.volume-button {
+  display: flex;
+  flex-direction: row;  
+}
+
+.volume-slider {
+display:flex; 
+  top: 50%;
+  right: 100%;
+  opacity: 0;
+
+  width: auto;
+  transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+.volume-button:hover .volume-slider {
+  opacity: 1;
+  visibility: visible;
+  right: calc(100% + 5px);
+  transition: flex-grow 2s opacity 0.3s ease-in-out; 
+}
+
+.volume-container {
+  display: flex;
+  width: auto;
+  transition: flex-grow 0.5s ease-in-out; 
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 7px;
+  background-color: #eee;
+  margin: 9px 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: flex-grow 0.3s ease-in-out; 
+}
+
+.volume-button:hover .progress-bar {
+  flex-grow: 0;
+}
+
+.progress-bar div {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.3s ease-in-out;
+}
+
+.container{
+  width: 100%;
+  padding: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; 
+}
+
+@media (min-width: 1264px){
+  .container {
+    max-width: 1185px; 
+   }
+}
+
+@media (min-width: 960px){
+  .container{
+    max-width:900px;
+  }
+}
+
+
+.dropdown-contents {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border: black;
+  color: black;
+}
+
+.dropdown-list :hover {
+  background-color: grey;
+}
+
+.name-explicit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.song-time {
+  margin-right: 3px;
+  margin-top: 19px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 80px;
+  height: 30px;
+  background: green; 
+  border-radius: 5px;
+  font-size: small;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+display: flex;
+}
+
+.deezer-button {
+  margin-top: 15px;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  width: 25%;
+  height: 40px;
+  background-color: darkgreen; 
+  display: flex;
+  color: #ffffff; 
+  text-decoration: none; 
+  padding: 10px 20px; 
+  border-radius: 20px; 
+}
+
+.deezer-button:hover {
+  background-color: #008000; 
+}
+
+.dropdown-list {
+  width: 200px;
+  position: absolute;
+  bottom: 80%; 
+  right: 0;
+  border: 1px solid #ccc;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  margin-bottom: 8px;
+  border: none;
+  padding: 8px;
+  outline: none;
+}
+
+.placeholder-text {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  transition: transform 0.3s, font-size 0.3s;
+}
+.search-bar:focus + .placeholder-text {
+  transform: translateY(-150%) translateX(-9%) scale(0.8); text-emphasis-color: #3498db;
+}
+
+button.search-button {
+  width: 50%;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  outline: none;
+}
